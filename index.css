@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    /* v4 native CSS variable usage or standard CSS */
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    /* slate-50 */
+    color: #0f172a;
+    /* slate-900 */
+  }
+
+  /* Dark mode text color override */
+  :global(.dark) body {
+    background-color: #020617;
+    /* slate-950 */
+    color: #f8fafc;
+    /* slate-50 */
+  }
+}
+
+@layer components {
+  .markdown-prose {
+    @apply text-slate-800 leading-relaxed space-y-4;
+  }
+
+  .markdown-prose p {
+    @apply mb-4;
+  }
+
+  .markdown-prose strong {
+    @apply font-bold text-slate-900;
+  }
+
+  .markdown-prose ul {
+    @apply list-disc list-inside space-y-2 mb-4 ml-2;
+  }
+
+  .markdown-prose li {
+    @apply text-slate-700;
+  }
+
+  .markdown-prose h1,
+  .markdown-prose h2,
+  .markdown-prose h3 {
+    @apply font-black text-slate-900 mt-6 mb-3;
+  }
+}
