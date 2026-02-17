@@ -115,7 +115,7 @@ const App: React.FC = () => {
           if (isExamHash) window.location.hash = '';
 
           // Default routing
-          if (view !== 'EXAM' && view !== 'RESULT' && view !== 'REVIEW' && view !== 'ADMIN_ACCESS') {
+          if (view !== 'EXAM' && view !== 'RESULT' && view !== 'REVIEW' && view !== 'ADMIN_ACCESS' && view !== 'TUTOR_PLAN_SELECTION' && view !== 'PRIVACY' && view !== 'TERMS') {
             if (currentUser.role === 'TUTOR') setView('TUTOR_DASHBOARD');
             else if (currentUser.role === 'ADMIN') setView('ADMIN_DASHBOARD');
             else setView('DASHBOARD');
